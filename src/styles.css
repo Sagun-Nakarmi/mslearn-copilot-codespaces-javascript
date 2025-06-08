@@ -1,7 +1,6 @@
 /**
 * CSS file to hold styles that apply across the application
 */
-
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@200;400;600;800&display=swap");
 
 html,
@@ -122,4 +121,26 @@ a:hover {
 img.socialIcon {
   height: 30px;
   width: 30px;
+}
+
+/* add an amazing animation to the social icons */
+img.socialIcon:hover {
+  animation: bounce 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite alternate;
+}
+
+a.socialIconLink:hover img.socialIcon,
+a.socialIconLink img.socialIcon:hover {
+  animation: bounce 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.2);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
 }
